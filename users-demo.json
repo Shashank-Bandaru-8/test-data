@@ -1,0 +1,5210 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Alice",
+      "email": "alice@example.com",
+      "phone": "555-0100",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-01-01",
+      "lastLoginAt": "2026-10-01T08:00:00Z",
+      "metadata": {
+        "vip": true,
+        "tags": [
+          "beta",
+          "premium"
+        ],
+        "quota": 100
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1000",
+          "item": "Laptop",
+          "sku": "SKU-LAP-0",
+          "quantity": 1,
+          "unitPrice": 10,
+          "total": 10,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-01-01",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-10000",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 1 for order 1",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East",
+                      "history": [
+                        {
+                          "change": "location set",
+                          "by": "system"
+                        },
+                        {
+                          "change": "location verified",
+                          "by": "ops-agent"
+                        }
+                      ]
+                    },
+                    {
+                      "key": "temp",
+                      "value": "20C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "firstName": "Bob",
+      "email": "bob@example.com",
+      "phone": "555-0101",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-02-02",
+      "lastLoginAt": "2026-10-02T09:01:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta"
+        ],
+        "quota": 110
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1010",
+          "item": "Mouse",
+          "sku": "SKU-MOU-1",
+          "quantity": 2,
+          "unitPrice": 20,
+          "total": 40,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-02-02",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-10100",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 1 for order 2",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "21C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1011",
+          "item": "Keyboard",
+          "sku": "SKU-KEY-2",
+          "quantity": 3,
+          "unitPrice": 30,
+          "total": 90,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-02-02",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-10101",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 2 for order 2",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "21C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "firstName": "Carol",
+      "email": "carol@example.com",
+      "phone": "555-0102",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-03-03",
+      "lastLoginAt": "2026-10-03T10:02:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 120
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1020",
+          "item": "Keyboard",
+          "sku": "SKU-KEY-2",
+          "quantity": 3,
+          "unitPrice": 30,
+          "total": 90,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-03-03",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-10200",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 1 for order 3",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "22C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1021",
+          "item": "Monitor",
+          "sku": "SKU-MON-3",
+          "quantity": 4,
+          "unitPrice": 40,
+          "total": 160,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-03-03",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-10201",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 2 for order 3",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "22C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1022",
+          "item": "Headphones",
+          "sku": "SKU-HEA-4",
+          "quantity": 5,
+          "unitPrice": 50,
+          "total": 250,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-03-03",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-10202",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 3 for order 3",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "22C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "firstName": "David",
+      "email": "david@example.com",
+      "phone": "555-0103",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-04-04",
+      "lastLoginAt": "2026-10-04T11:03:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 130
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1030",
+          "item": "Monitor",
+          "sku": "SKU-MON-3",
+          "quantity": 4,
+          "unitPrice": 40,
+          "total": 160,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-04-04",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-10300",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 1 for order 4",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "23C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-3"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "firstName": "Emma",
+      "email": "emma@example.com",
+      "phone": "555-0104",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-05-05",
+      "lastLoginAt": "2026-10-05T12:04:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta",
+          "premium"
+        ],
+        "quota": 140
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1040",
+          "item": "Headphones",
+          "sku": "SKU-HEA-4",
+          "quantity": 5,
+          "unitPrice": 50,
+          "total": 250,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-05-05",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-10400",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 1 for order 5",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "24C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-4"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1041",
+          "item": "Webcam",
+          "sku": "SKU-WEB-5",
+          "quantity": 1,
+          "unitPrice": 60,
+          "total": 60,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-05-05",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-10401",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 2 for order 5",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "24C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-4"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "firstName": "Frank",
+      "email": "frank@example.com",
+      "phone": "555-0105",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-06-06",
+      "lastLoginAt": "2026-10-06T13:05:00Z",
+      "metadata": {
+        "vip": true,
+        "tags": [
+          "beta"
+        ],
+        "quota": 150
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1050",
+          "item": "Webcam",
+          "sku": "SKU-WEB-5",
+          "quantity": 1,
+          "unitPrice": 60,
+          "total": 60,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-06-06",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-10500",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 1 for order 6",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "25C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-5"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1051",
+          "item": "Desk",
+          "sku": "SKU-DES-6",
+          "quantity": 2,
+          "unitPrice": 70,
+          "total": 140,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-06-06",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-10501",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 2 for order 6",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "25C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-5"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1052",
+          "item": "Chair",
+          "sku": "SKU-CHA-7",
+          "quantity": 3,
+          "unitPrice": 80,
+          "total": 240,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-06-06",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-10502",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 3 for order 6",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "25C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-5"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "firstName": "Grace",
+      "email": "grace@example.com",
+      "phone": "555-0106",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-07-07",
+      "lastLoginAt": "2026-10-07T14:06:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 160
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1060",
+          "item": "Desk",
+          "sku": "SKU-DES-6",
+          "quantity": 2,
+          "unitPrice": 70,
+          "total": 140,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-07-07",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-10600",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 1 for order 7",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "26C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-6"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "firstName": "Henry",
+      "email": "henry@example.com",
+      "phone": "555-0107",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-08-08",
+      "lastLoginAt": "2026-10-08T15:07:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 170
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1070",
+          "item": "Chair",
+          "sku": "SKU-CHA-7",
+          "quantity": 3,
+          "unitPrice": 80,
+          "total": 240,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-08-08",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-10700",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 1 for order 8",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "27C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-7"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1071",
+          "item": "Dock",
+          "sku": "SKU-DOC-8",
+          "quantity": 4,
+          "unitPrice": 90,
+          "total": 360,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-08-08",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-10701",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 2 for order 8",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "27C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-7"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "firstName": "Ivy",
+      "email": "ivy@example.com",
+      "phone": "555-0108",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-09-09",
+      "lastLoginAt": "2026-10-09T16:08:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta",
+          "premium"
+        ],
+        "quota": 180
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1080",
+          "item": "Dock",
+          "sku": "SKU-DOC-8",
+          "quantity": 4,
+          "unitPrice": 90,
+          "total": 360,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-09-09",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-10800",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 1 for order 9",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "28C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-8"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1081",
+          "item": "Cable",
+          "sku": "SKU-CAB-9",
+          "quantity": 5,
+          "unitPrice": 100,
+          "total": 500,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-09-09",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-10801",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 2 for order 9",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "28C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-8"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1082",
+          "item": "Laptop",
+          "sku": "SKU-LAP-0",
+          "quantity": 1,
+          "unitPrice": 110,
+          "total": 110,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-09-09",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-10802",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 3 for order 9",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "28C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-8"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "firstName": "Jack",
+      "email": "jack@example.com",
+      "phone": "555-0109",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-10-10",
+      "lastLoginAt": "2026-10-10T17:09:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta"
+        ],
+        "quota": 190
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1090",
+          "item": "Cable",
+          "sku": "SKU-CAB-9",
+          "quantity": 5,
+          "unitPrice": 100,
+          "total": 500,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-01-10",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-10900",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 1 for order 10",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "29C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-9"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "firstName": "Kate",
+      "email": "kate@example.com",
+      "phone": "555-0110",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-11-11",
+      "lastLoginAt": "2026-10-11T18:10:00Z",
+      "metadata": {
+        "vip": true,
+        "tags": [],
+        "quota": 200
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1100",
+          "item": "Laptop",
+          "sku": "SKU-LAP-0",
+          "quantity": 1,
+          "unitPrice": 110,
+          "total": 110,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-02-11",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-11000",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 1 for order 11",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "20C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-10"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1101",
+          "item": "Mouse",
+          "sku": "SKU-MOU-1",
+          "quantity": 2,
+          "unitPrice": 120,
+          "total": 240,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-02-11",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-11001",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 2 for order 11",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "20C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-10"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "firstName": "Liam",
+      "email": "liam@example.com",
+      "phone": "555-0111",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-12-12",
+      "lastLoginAt": "2026-10-12T19:11:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 210
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1110",
+          "item": "Mouse",
+          "sku": "SKU-MOU-1",
+          "quantity": 2,
+          "unitPrice": 120,
+          "total": 240,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-03-12",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-11100",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 1 for order 12",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "21C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-11"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1111",
+          "item": "Keyboard",
+          "sku": "SKU-KEY-2",
+          "quantity": 3,
+          "unitPrice": 130,
+          "total": 390,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-03-12",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-11101",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 2 for order 12",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "21C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-11"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1112",
+          "item": "Monitor",
+          "sku": "SKU-MON-3",
+          "quantity": 4,
+          "unitPrice": 140,
+          "total": 560,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-03-12",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-11102",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 3 for order 12",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "21C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-11"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "firstName": "Mia",
+      "email": "mia@example.com",
+      "phone": "555-0112",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-01-13",
+      "lastLoginAt": "2026-10-13T08:12:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta",
+          "premium"
+        ],
+        "quota": 220
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1120",
+          "item": "Keyboard",
+          "sku": "SKU-KEY-2",
+          "quantity": 3,
+          "unitPrice": 130,
+          "total": 390,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-04-13",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-11200",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 1 for order 13",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "22C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-12"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "firstName": "Noah",
+      "email": "noah@example.com",
+      "phone": "555-0113",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-02-14",
+      "lastLoginAt": "2026-10-14T09:13:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta"
+        ],
+        "quota": 230
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1130",
+          "item": "Monitor",
+          "sku": "SKU-MON-3",
+          "quantity": 4,
+          "unitPrice": 140,
+          "total": 560,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-05-14",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-11300",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 1 for order 14",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "23C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-13"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1131",
+          "item": "Headphones",
+          "sku": "SKU-HEA-4",
+          "quantity": 5,
+          "unitPrice": 150,
+          "total": 750,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-05-14",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-11301",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 2 for order 14",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "23C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-13"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "firstName": "Olivia",
+      "email": "olivia@example.com",
+      "phone": "555-0114",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-03-15",
+      "lastLoginAt": "2026-10-15T10:14:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 240
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1140",
+          "item": "Headphones",
+          "sku": "SKU-HEA-4",
+          "quantity": 5,
+          "unitPrice": 150,
+          "total": 750,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-06-15",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-11400",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 1 for order 15",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "24C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-14"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1141",
+          "item": "Webcam",
+          "sku": "SKU-WEB-5",
+          "quantity": 1,
+          "unitPrice": 160,
+          "total": 160,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-06-15",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-11401",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 2 for order 15",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "24C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-14"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1142",
+          "item": "Desk",
+          "sku": "SKU-DES-6",
+          "quantity": 2,
+          "unitPrice": 170,
+          "total": 340,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-06-15",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-11402",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 3 for order 15",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "24C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-14"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "firstName": "Peter",
+      "email": "peter@example.com",
+      "phone": "555-0115",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-04-16",
+      "lastLoginAt": "2026-10-16T11:15:00Z",
+      "metadata": {
+        "vip": true,
+        "tags": [],
+        "quota": 250
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1150",
+          "item": "Webcam",
+          "sku": "SKU-WEB-5",
+          "quantity": 1,
+          "unitPrice": 160,
+          "total": 160,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-07-16",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-11500",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 1 for order 16",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "25C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-15"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "firstName": "Quinn",
+      "email": "quinn@example.com",
+      "phone": "555-0116",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-05-17",
+      "lastLoginAt": "2026-10-17T12:16:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta",
+          "premium"
+        ],
+        "quota": 260
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1160",
+          "item": "Desk",
+          "sku": "SKU-DES-6",
+          "quantity": 2,
+          "unitPrice": 170,
+          "total": 340,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-08-17",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-11600",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 1 for order 17",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "26C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-16"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1161",
+          "item": "Chair",
+          "sku": "SKU-CHA-7",
+          "quantity": 3,
+          "unitPrice": 180,
+          "total": 540,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-08-17",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-11601",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 2 for order 17",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "26C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-16"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "firstName": "Rachel",
+      "email": "rachel@example.com",
+      "phone": "555-0117",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-06-18",
+      "lastLoginAt": "2026-10-18T13:17:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta"
+        ],
+        "quota": 270
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1170",
+          "item": "Chair",
+          "sku": "SKU-CHA-7",
+          "quantity": 3,
+          "unitPrice": 180,
+          "total": 540,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-09-18",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-11700",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 1 for order 18",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "27C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-17"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1171",
+          "item": "Dock",
+          "sku": "SKU-DOC-8",
+          "quantity": 4,
+          "unitPrice": 190,
+          "total": 760,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-09-18",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-11701",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 2 for order 18",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "27C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-17"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1172",
+          "item": "Cable",
+          "sku": "SKU-CAB-9",
+          "quantity": 5,
+          "unitPrice": 200,
+          "total": 1000,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-09-18",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-11702",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 3 for order 18",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "27C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-17"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "firstName": "Sam",
+      "email": "sam@example.com",
+      "phone": "555-0118",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-07-19",
+      "lastLoginAt": "2026-10-19T14:18:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 280
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1180",
+          "item": "Dock",
+          "sku": "SKU-DOC-8",
+          "quantity": 4,
+          "unitPrice": 190,
+          "total": 760,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-01-19",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-11800",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 1 for order 19",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "28C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-18"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "firstName": "Tina",
+      "email": "tina@example.com",
+      "phone": "555-0119",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-08-20",
+      "lastLoginAt": "2026-10-20T15:19:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 290
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1190",
+          "item": "Cable",
+          "sku": "SKU-CAB-9",
+          "quantity": 5,
+          "unitPrice": 200,
+          "total": 1000,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-02-20",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-11900",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 1 for order 20",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "29C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-19"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1191",
+          "item": "Laptop",
+          "sku": "SKU-LAP-0",
+          "quantity": 1,
+          "unitPrice": 210,
+          "total": 210,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-02-20",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-11901",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 2 for order 20",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "29C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-19"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "firstName": "Uma",
+      "email": "uma@example.com",
+      "phone": "555-0120",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-09-21",
+      "lastLoginAt": "2026-10-21T16:20:00Z",
+      "metadata": {
+        "vip": true,
+        "tags": [
+          "beta",
+          "premium"
+        ],
+        "quota": 300
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1200",
+          "item": "Laptop",
+          "sku": "SKU-LAP-0",
+          "quantity": 1,
+          "unitPrice": 210,
+          "total": 210,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-03-21",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-12000",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 1 for order 21",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "20C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-20"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1201",
+          "item": "Mouse",
+          "sku": "SKU-MOU-1",
+          "quantity": 2,
+          "unitPrice": 220,
+          "total": 440,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-03-21",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-12001",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 2 for order 21",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "20C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-20"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1202",
+          "item": "Keyboard",
+          "sku": "SKU-KEY-2",
+          "quantity": 3,
+          "unitPrice": 230,
+          "total": 690,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-03-21",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-12002",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 3 for order 21",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "20C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-20"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "firstName": "Victor",
+      "email": "victor@example.com",
+      "phone": "555-0121",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-10-22",
+      "lastLoginAt": "2026-10-22T17:21:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta"
+        ],
+        "quota": 310
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1210",
+          "item": "Mouse",
+          "sku": "SKU-MOU-1",
+          "quantity": 2,
+          "unitPrice": 220,
+          "total": 440,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-04-22",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-12100",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 1 for order 22",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "21C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-21"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "firstName": "Wendy",
+      "email": "wendy@example.com",
+      "phone": "555-0122",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-11-23",
+      "lastLoginAt": "2026-10-23T18:22:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 320
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1220",
+          "item": "Keyboard",
+          "sku": "SKU-KEY-2",
+          "quantity": 3,
+          "unitPrice": 230,
+          "total": 690,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-05-23",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-12200",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 1 for order 23",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "22C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-22"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1221",
+          "item": "Monitor",
+          "sku": "SKU-MON-3",
+          "quantity": 4,
+          "unitPrice": 240,
+          "total": 960,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-05-23",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-12201",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 2 for order 23",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "22C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-22"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "firstName": "Xander",
+      "email": "xander@example.com",
+      "phone": "555-0123",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-12-24",
+      "lastLoginAt": "2026-10-24T19:23:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 330
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1230",
+          "item": "Monitor",
+          "sku": "SKU-MON-3",
+          "quantity": 4,
+          "unitPrice": 240,
+          "total": 960,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-06-24",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-12300",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 1 for order 24",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "23C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-23"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1231",
+          "item": "Headphones",
+          "sku": "SKU-HEA-4",
+          "quantity": 5,
+          "unitPrice": 250,
+          "total": 1250,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-06-24",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-12301",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 2 for order 24",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "23C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-23"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1232",
+          "item": "Webcam",
+          "sku": "SKU-WEB-5",
+          "quantity": 1,
+          "unitPrice": 260,
+          "total": 260,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-06-24",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-12302",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 3 for order 24",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "23C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-23"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "firstName": "Yara",
+      "email": "yara@example.com",
+      "phone": "555-0124",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-01-25",
+      "lastLoginAt": "2026-10-25T08:24:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta",
+          "premium"
+        ],
+        "quota": 340
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1240",
+          "item": "Headphones",
+          "sku": "SKU-HEA-4",
+          "quantity": 5,
+          "unitPrice": 250,
+          "total": 1250,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-07-25",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-12400",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 1 for order 25",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "24C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-24"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "firstName": "Zack",
+      "email": "zack@example.com",
+      "phone": "555-0125",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-02-26",
+      "lastLoginAt": "2026-10-26T09:25:00Z",
+      "metadata": {
+        "vip": true,
+        "tags": [
+          "beta"
+        ],
+        "quota": 350
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1250",
+          "item": "Webcam",
+          "sku": "SKU-WEB-5",
+          "quantity": 1,
+          "unitPrice": 260,
+          "total": 260,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-08-26",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-12500",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 1 for order 26",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "25C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-25"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1251",
+          "item": "Desk",
+          "sku": "SKU-DES-6",
+          "quantity": 2,
+          "unitPrice": 270,
+          "total": 540,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-08-26",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-12501",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 2 for order 26",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "25C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-25"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "firstName": "Amy",
+      "email": "amy@example.com",
+      "phone": "555-0126",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-03-27",
+      "lastLoginAt": "2026-10-27T10:26:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 360
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1260",
+          "item": "Desk",
+          "sku": "SKU-DES-6",
+          "quantity": 2,
+          "unitPrice": 270,
+          "total": 540,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-09-27",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-12600",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 1 for order 27",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "26C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-26"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1261",
+          "item": "Chair",
+          "sku": "SKU-CHA-7",
+          "quantity": 3,
+          "unitPrice": 280,
+          "total": 840,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-09-27",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-12601",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 2 for order 27",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "26C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-26"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1262",
+          "item": "Dock",
+          "sku": "SKU-DOC-8",
+          "quantity": 4,
+          "unitPrice": 290,
+          "total": 1160,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-09-27",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-12602",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 3 for order 27",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "26C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-26"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "firstName": "Brian",
+      "email": "brian@example.com",
+      "phone": "555-0127",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-04-28",
+      "lastLoginAt": "2026-10-28T11:27:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 370
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1270",
+          "item": "Chair",
+          "sku": "SKU-CHA-7",
+          "quantity": 3,
+          "unitPrice": 280,
+          "total": 840,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-01-28",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-12700",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 1 for order 28",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "27C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-27"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "firstName": "Cindy",
+      "email": "cindy@example.com",
+      "phone": "555-0128",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-05-01",
+      "lastLoginAt": "2026-10-01T12:28:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta",
+          "premium"
+        ],
+        "quota": 380
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1280",
+          "item": "Dock",
+          "sku": "SKU-DOC-8",
+          "quantity": 4,
+          "unitPrice": 290,
+          "total": 1160,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-02-01",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-12800",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 1 for order 29",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "28C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-28"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1281",
+          "item": "Cable",
+          "sku": "SKU-CAB-9",
+          "quantity": 5,
+          "unitPrice": 300,
+          "total": 1500,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-02-01",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-12801",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 2 for order 29",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "28C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-28"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "firstName": "Derek",
+      "email": "derek@example.com",
+      "phone": "555-0129",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-06-02",
+      "lastLoginAt": "2026-10-02T13:29:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta"
+        ],
+        "quota": 390
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1290",
+          "item": "Cable",
+          "sku": "SKU-CAB-9",
+          "quantity": 5,
+          "unitPrice": 300,
+          "total": 1500,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-03-02",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-12900",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 1 for order 30",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "29C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-29"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1291",
+          "item": "Laptop",
+          "sku": "SKU-LAP-0",
+          "quantity": 1,
+          "unitPrice": 310,
+          "total": 310,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-03-02",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-12901",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 2 for order 30",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "29C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-29"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1292",
+          "item": "Mouse",
+          "sku": "SKU-MOU-1",
+          "quantity": 2,
+          "unitPrice": 320,
+          "total": 640,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-03-02",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-12902",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 3 for order 30",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "29C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-29"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "firstName": "Elena",
+      "email": "elena@example.com",
+      "phone": "555-0130",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-07-03",
+      "lastLoginAt": "2026-10-03T14:30:00Z",
+      "metadata": {
+        "vip": true,
+        "tags": [],
+        "quota": 400
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1300",
+          "item": "Laptop",
+          "sku": "SKU-LAP-0",
+          "quantity": 1,
+          "unitPrice": 310,
+          "total": 310,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-04-03",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-13000",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 1 for order 31",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "20C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-30"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "firstName": "Felix",
+      "email": "felix@example.com",
+      "phone": "555-0131",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-08-04",
+      "lastLoginAt": "2026-10-04T15:31:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 410
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1310",
+          "item": "Mouse",
+          "sku": "SKU-MOU-1",
+          "quantity": 2,
+          "unitPrice": 320,
+          "total": 640,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-05-04",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-13100",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 1 for order 32",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "21C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-31"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1311",
+          "item": "Keyboard",
+          "sku": "SKU-KEY-2",
+          "quantity": 3,
+          "unitPrice": 330,
+          "total": 990,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-05-04",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-13101",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 2 for order 32",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "21C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-31"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "firstName": "Gina",
+      "email": "gina@example.com",
+      "phone": "555-0132",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-09-05",
+      "lastLoginAt": "2026-10-05T16:32:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta",
+          "premium"
+        ],
+        "quota": 420
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1320",
+          "item": "Keyboard",
+          "sku": "SKU-KEY-2",
+          "quantity": 3,
+          "unitPrice": 330,
+          "total": 990,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-06-05",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-13200",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 1 for order 33",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "22C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-32"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1321",
+          "item": "Monitor",
+          "sku": "SKU-MON-3",
+          "quantity": 4,
+          "unitPrice": 340,
+          "total": 1360,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-06-05",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-13201",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 2 for order 33",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "22C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-32"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1322",
+          "item": "Headphones",
+          "sku": "SKU-HEA-4",
+          "quantity": 5,
+          "unitPrice": 350,
+          "total": 1750,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-06-05",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-13202",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 3 for order 33",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "22C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-32"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "firstName": "Hugo",
+      "email": "hugo@example.com",
+      "phone": "555-0133",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-10-06",
+      "lastLoginAt": "2026-10-06T17:33:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta"
+        ],
+        "quota": 430
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1330",
+          "item": "Monitor",
+          "sku": "SKU-MON-3",
+          "quantity": 4,
+          "unitPrice": 340,
+          "total": 1360,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-07-06",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-13300",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 1 for order 34",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "23C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-33"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "firstName": "Iris",
+      "email": "iris@example.com",
+      "phone": "555-0134",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-11-07",
+      "lastLoginAt": "2026-10-07T18:34:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 440
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1340",
+          "item": "Headphones",
+          "sku": "SKU-HEA-4",
+          "quantity": 5,
+          "unitPrice": 350,
+          "total": 1750,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-08-07",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-13400",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 1 for order 35",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "24C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-34"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1341",
+          "item": "Webcam",
+          "sku": "SKU-WEB-5",
+          "quantity": 1,
+          "unitPrice": 360,
+          "total": 360,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-08-07",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-13401",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 2 for order 35",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "24C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-34"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "firstName": "Jason",
+      "email": "jason@example.com",
+      "phone": "555-0135",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-12-08",
+      "lastLoginAt": "2026-10-08T19:35:00Z",
+      "metadata": {
+        "vip": true,
+        "tags": [],
+        "quota": 450
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1350",
+          "item": "Webcam",
+          "sku": "SKU-WEB-5",
+          "quantity": 1,
+          "unitPrice": 360,
+          "total": 360,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-09-08",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-13500",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 1 for order 36",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "25C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-35"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1351",
+          "item": "Desk",
+          "sku": "SKU-DES-6",
+          "quantity": 2,
+          "unitPrice": 370,
+          "total": 740,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-09-08",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-13501",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 2 for order 36",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "25C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-35"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1352",
+          "item": "Chair",
+          "sku": "SKU-CHA-7",
+          "quantity": 3,
+          "unitPrice": 380,
+          "total": 1140,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-09-08",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-13502",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 3 for order 36",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "25C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-35"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "firstName": "Kelly",
+      "email": "kelly@example.com",
+      "phone": "555-0136",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-01-09",
+      "lastLoginAt": "2026-10-09T08:36:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta",
+          "premium"
+        ],
+        "quota": 460
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1360",
+          "item": "Desk",
+          "sku": "SKU-DES-6",
+          "quantity": 2,
+          "unitPrice": 370,
+          "total": 740,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-01-09",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-13600",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 1 for order 37",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "26C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-36"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "firstName": "Leo",
+      "email": "leo@example.com",
+      "phone": "555-0137",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-02-10",
+      "lastLoginAt": "2026-10-10T09:37:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta"
+        ],
+        "quota": 470
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1370",
+          "item": "Chair",
+          "sku": "SKU-CHA-7",
+          "quantity": 3,
+          "unitPrice": 380,
+          "total": 1140,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-02-10",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-13700",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 1 for order 38",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "27C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-37"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1371",
+          "item": "Dock",
+          "sku": "SKU-DOC-8",
+          "quantity": 4,
+          "unitPrice": 390,
+          "total": 1560,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-02-10",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-13701",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 2 for order 38",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "27C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-37"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "firstName": "Mona",
+      "email": "mona@example.com",
+      "phone": "555-0138",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-03-11",
+      "lastLoginAt": "2026-10-11T10:38:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 480
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1380",
+          "item": "Dock",
+          "sku": "SKU-DOC-8",
+          "quantity": 4,
+          "unitPrice": 390,
+          "total": 1560,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-03-11",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-13800",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 1 for order 39",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "28C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-38"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1381",
+          "item": "Cable",
+          "sku": "SKU-CAB-9",
+          "quantity": 5,
+          "unitPrice": 400,
+          "total": 2000,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-03-11",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-13801",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 2 for order 39",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "28C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-38"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1382",
+          "item": "Laptop",
+          "sku": "SKU-LAP-0",
+          "quantity": 1,
+          "unitPrice": 410,
+          "total": 410,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-03-11",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-13802",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 3 for order 39",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "28C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-38"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "firstName": "Nathan",
+      "email": "nathan@example.com",
+      "phone": "555-0139",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-04-12",
+      "lastLoginAt": "2026-10-12T11:39:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 490
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1390",
+          "item": "Cable",
+          "sku": "SKU-CAB-9",
+          "quantity": 5,
+          "unitPrice": 400,
+          "total": 2000,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-04-12",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-13900",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 1 for order 40",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "29C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-39"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "firstName": "Oscar",
+      "email": "oscar@example.com",
+      "phone": "555-0140",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-05-13",
+      "lastLoginAt": "2026-10-13T12:40:00Z",
+      "metadata": {
+        "vip": true,
+        "tags": [
+          "beta",
+          "premium"
+        ],
+        "quota": 500
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1400",
+          "item": "Laptop",
+          "sku": "SKU-LAP-0",
+          "quantity": 1,
+          "unitPrice": 410,
+          "total": 410,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-05-13",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-14000",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 1 for order 41",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "20C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-40"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1401",
+          "item": "Mouse",
+          "sku": "SKU-MOU-1",
+          "quantity": 2,
+          "unitPrice": 420,
+          "total": 840,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-05-13",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-14001",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 2 for order 41",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "20C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-40"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "firstName": "Paula",
+      "email": "paula@example.com",
+      "phone": "555-0141",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-06-14",
+      "lastLoginAt": "2026-10-14T13:41:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta"
+        ],
+        "quota": 510
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1410",
+          "item": "Mouse",
+          "sku": "SKU-MOU-1",
+          "quantity": 2,
+          "unitPrice": 420,
+          "total": 840,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-06-14",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-14100",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 1 for order 42",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "21C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-41"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1411",
+          "item": "Keyboard",
+          "sku": "SKU-KEY-2",
+          "quantity": 3,
+          "unitPrice": 430,
+          "total": 1290,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-06-14",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-14101",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 2 for order 42",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "21C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-41"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1412",
+          "item": "Monitor",
+          "sku": "SKU-MON-3",
+          "quantity": 4,
+          "unitPrice": 440,
+          "total": 1760,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-06-14",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-14102",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 3 for order 42",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "21C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-41"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "firstName": "Ryan",
+      "email": "ryan@example.com",
+      "phone": "555-0142",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-07-15",
+      "lastLoginAt": "2026-10-15T14:42:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 520
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1420",
+          "item": "Keyboard",
+          "sku": "SKU-KEY-2",
+          "quantity": 3,
+          "unitPrice": 430,
+          "total": 1290,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-07-15",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-14200",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 1 for order 43",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "22C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-42"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "firstName": "Sara",
+      "email": "sara@example.com",
+      "phone": "555-0143",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-08-16",
+      "lastLoginAt": "2026-10-16T15:43:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 530
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1430",
+          "item": "Monitor",
+          "sku": "SKU-MON-3",
+          "quantity": 4,
+          "unitPrice": 440,
+          "total": 1760,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-08-16",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-14300",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 1 for order 44",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "23C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-43"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1431",
+          "item": "Headphones",
+          "sku": "SKU-HEA-4",
+          "quantity": 5,
+          "unitPrice": 450,
+          "total": 2250,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-08-16",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "USPS",
+              "tracking": "TRK-14301",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 2 for order 44",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "23C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-43"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "firstName": "Tom",
+      "email": "tom@example.com",
+      "phone": "555-0144",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-09-17",
+      "lastLoginAt": "2026-10-17T16:44:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [
+          "beta",
+          "premium"
+        ],
+        "quota": 540
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1440",
+          "item": "Headphones",
+          "sku": "SKU-HEA-4",
+          "quantity": 5,
+          "unitPrice": 450,
+          "total": 2250,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-09-17",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-14400",
+              "events": [
+                {
+                  "status": "out_for_delivery",
+                  "note": "Event 1 for order 45",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "24C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-44"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1441",
+          "item": "Webcam",
+          "sku": "SKU-WEB-5",
+          "quantity": 1,
+          "unitPrice": 460,
+          "total": 460,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-09-17",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-14401",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 2 for order 45",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "24C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-44"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1442",
+          "item": "Desk",
+          "sku": "SKU-DES-6",
+          "quantity": 2,
+          "unitPrice": 470,
+          "total": 940,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "US-East",
+          "orderedAt": "2026-09-17",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "Amazon",
+              "tracking": "TRK-14402",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 3 for order 45",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-East"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "24C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-44"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "firstName": "Ursula",
+      "email": "ursula@example.com",
+      "phone": "555-0145",
+      "active": false,
+      "plan": "free",
+      "joinedAt": "2020-10-18",
+      "lastLoginAt": "2026-10-18T17:45:00Z",
+      "metadata": {
+        "vip": true,
+        "tags": [
+          "beta"
+        ],
+        "quota": 550
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1450",
+          "item": "Webcam",
+          "sku": "SKU-WEB-5",
+          "quantity": 1,
+          "unitPrice": 460,
+          "total": 460,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "US-West",
+          "orderedAt": "2026-01-18",
+          "notes": "Priority",
+          "shipments": [
+            {
+              "carrier": "FedEx",
+              "tracking": "TRK-14500",
+              "events": [
+                {
+                  "status": "delivered",
+                  "note": "Event 1 for order 46",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "US-West"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "25C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-45"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "firstName": "Vera",
+      "email": "vera@example.com",
+      "phone": "555-0146",
+      "active": true,
+      "plan": "team",
+      "joinedAt": "2021-11-19",
+      "lastLoginAt": "2026-10-19T18:46:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 560
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1460",
+          "item": "Desk",
+          "sku": "SKU-DES-6",
+          "quantity": 2,
+          "unitPrice": 470,
+          "total": 940,
+          "status": "delivered",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-02-19",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-14600",
+              "events": [
+                {
+                  "status": "exception",
+                  "note": "Event 1 for order 47",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "26C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-46"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1461",
+          "item": "Chair",
+          "sku": "SKU-CHA-7",
+          "quantity": 3,
+          "unitPrice": 480,
+          "total": 1440,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "EU-Central",
+          "orderedAt": "2026-02-19",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "UPS",
+              "tracking": "TRK-14601",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 2 for order 47",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "EU-Central"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "26C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-46"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "firstName": "Walt",
+      "email": "walt@example.com",
+      "phone": "555-0147",
+      "active": true,
+      "plan": "enterprise",
+      "joinedAt": "2022-12-20",
+      "lastLoginAt": "2026-10-20T19:47:00Z",
+      "metadata": {
+        "vip": false,
+        "tags": [],
+        "quota": 570
+      },
+      "orders": [
+        {
+          "orderId": "ORD-1470",
+          "item": "Chair",
+          "sku": "SKU-CHA-7",
+          "quantity": 3,
+          "unitPrice": 480,
+          "total": 1440,
+          "status": "cancelled",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-03-20",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-14700",
+              "events": [
+                {
+                  "status": "queued",
+                  "note": "Event 1 for order 48",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "27C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-47"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1471",
+          "item": "Dock",
+          "sku": "SKU-DOC-8",
+          "quantity": 4,
+          "unitPrice": 490,
+          "total": 1960,
+          "status": "pending",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-03-20",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-14701",
+              "events": [
+                {
+                  "status": "picked",
+                  "note": "Event 2 for order 48",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "27C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-47"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderId": "ORD-1472",
+          "item": "Cable",
+          "sku": "SKU-CAB-9",
+          "quantity": 5,
+          "unitPrice": 500,
+          "total": 2500,
+          "status": "shipped",
+          "currency": "USD",
+          "warehouse": "AP-South",
+          "orderedAt": "2026-03-20",
+          "notes": "",
+          "shipments": [
+            {
+              "carrier": "DHL",
+              "tracking": "TRK-14702",
+              "events": [
+                {
+                  "status": "in_transit",
+                  "note": "Event 3 for order 48",
+                  "meta": [
+                    {
+                      "key": "location",
+                      "value": "AP-South"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "27C"
+                    }
+                  ]
+                },
+                {
+                  "status": "processed",
+                  "note": "System processed",
+                  "meta": [
+                    {
+                      "key": "batch",
+                      "value": "B-47"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
